@@ -1,0 +1,188 @@
+.services-section {
+  padding: 48px 0 52px;
+  background-color: #fafcff;
+  border-top: 1px solid var(--border-divider);
+}
+
+.services-header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+/* Service Card General */
+.service-card {
+  padding: 28px 30px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Card 1: Lending Styles */
+.service-card-lending {
+  background: var(--bg-card-lending);
+  border: 1.5px solid var(--border-card-lending);
+}
+
+.service-card-lending:hover {
+  border-color: #badcfc;
+}
+
+/* Card 2: BPO Styles */
+.service-card-bpo {
+  background: var(--bg-card-bpo);
+  border: 1.5px solid var(--border-card-bpo);
+}
+
+.service-card-bpo:hover {
+  border-color: #b0e8ce;
+}
+
+/* Icon Circle */
+.service-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon-blue {
+  background: linear-gradient(135deg, #0e66de 0%, #084394 100%);
+  color: #ffffff;
+}
+
+.service-icon-green {
+  background: linear-gradient(135deg, #059669 0%, #036647 100%);
+  color: #ffffff;
+}
+
+/* Card Typography */
+.service-card-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  letter-spacing: -0.015em;
+}
+
+.service-card-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  min-height: 38px;
+}
+
+/* Checklist Grid */
+.service-checklist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.service-checklist-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.service-check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.check-icon-blue {
+  color: var(--primary-blue);
+  flex-shrink: 0;
+}
+
+.check-icon-green {
+  color: var(--accent-green);
+  flex-shrink: 0;
+}
+
+/* Explore Link / Button */
+.service-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: all var(--transition-fast);
+}
+
+.service-explore-link:hover {
+  gap: 12px;
+}
+
+.link-blue {
+  color: var(--primary-blue);
+}
+
+.link-blue:hover {
+  color: var(--primary-blue-dark);
+}
+
+.link-green {
+  color: var(--accent-green);
+}
+
+.link-green:hover {
+  color: var(--accent-green-dark);
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .service-checklist-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-section {
+    padding: 55px 0;
+  }
+
+  .service-card {
+    padding: 30px 22px;
+  }
+
+  .service-checklist-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

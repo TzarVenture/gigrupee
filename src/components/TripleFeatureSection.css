@@ -1,0 +1,219 @@
+.triple-section {
+  padding: 42px 0 46px;
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-divider);
+}
+
+.triple-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.triple-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.triple-header {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #0b2247;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid #edf2f7;
+}
+
+/* Col 1: Why Choose GigRupee */
+.why-choose-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 16px;
+}
+
+.why-choose-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.why-choose-item .check-icon-green {
+  color: var(--accent-green);
+  flex-shrink: 0;
+}
+
+/* Col 2: Our Process */
+.process-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  height: 100%;
+}
+
+.process-node-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.process-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.process-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #f0f7ff;
+  border: 1.5px solid #d9ecfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  transition: all var(--transition-normal);
+}
+
+.process-node:hover .process-icon-box {
+  background: var(--primary-blue);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(14, 102, 222, 0.25);
+}
+
+.process-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.process-num {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--primary-blue);
+}
+
+.process-title {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  max-width: 80px;
+}
+
+.process-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+/* Col 3: What Our Clients Say */
+.testimonial-box {
+  background: #f8fbff;
+  border: 1.5px solid #ddecfa;
+  border-radius: 16px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.quote-icon-wrap {
+  color: #93c5fd;
+  margin-bottom: 8px;
+}
+
+.quote-icon {
+  opacity: 0.6;
+}
+
+.testimonial-quote {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 16px;
+  min-height: 52px;
+}
+
+.testimonial-author-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  margin-bottom: 18px;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.testimonial-author-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-author-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.testimonial-author-role {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  transition: all var(--transition-fast);
+  padding: 0;
+}
+
+.carousel-dot.active {
+  width: 22px;
+  border-radius: 4px;
+  background-color: var(--primary-blue);
+}
+
+@media (max-width: 1080px) {
+  .triple-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-flow {
+    overflow-x: auto;
+    padding-bottom: 16px;
+  }
+}
