@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import StatsBar from './components/StatsBar';
@@ -11,9 +11,24 @@ import Footer from './components/Footer';
 import LeadModal from './components/LeadModal';
 import './App.css';
 
+function getInitialSubmitted() {
+  if (typeof window !== 'undefined') {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('submitted') === 'true';
+  }
+  return false;
+}
+
 function App() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalType, setModalType] = useState('general');
+  const isInitialSubmitted = getInitialSubmitted();
+  const [modalOpen, setModalOpen] = useState(isInitialSubmitted);
+  const [modalType, setModalType] = useState(isInitialSubmitted ? 'success' : 'general');
+
+  useEffect(() => {
+    if (isInitialSubmitted) {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }, [isInitialSubmitted]);
 
   const handleOpenContact = (type = 'general') => {
     setModalType(type);
@@ -61,6 +76,7 @@ function App() {
 
       {/* Interactive Lead Generation / Contact Modal */}
       <LeadModal 
+        key={`${modalType}-${modalOpen ? 'open' : 'closed'}`}
         isOpen={modalOpen} 
         onClose={handleCloseModal} 
         initialType={modalType} 
