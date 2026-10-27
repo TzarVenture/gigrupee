@@ -1,5 +1,4 @@
-import React from 'react';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, MapPin, ArrowRight } from 'lucide-react';
 import './ContactBanner.css';
 
 export default function ContactBanner({ onConnect }) {
@@ -25,17 +24,6 @@ export default function ContactBanner({ onConnect }) {
               </button>
             </div>
           </div>
-
-          {/* Segment 2: Call Us */}
-          <a href="tel:+919876543210" className="contact-info-block">
-            <div className="info-icon-circle">
-              <Phone size={20} />
-            </div>
-            <div className="info-content">
-              <span className="info-label">Call Us</span>
-              <span className="info-value">+91 98765 43210</span>
-            </div>
-          </a>
 
           {/* Segment 3: Email Us */}
           <a href="mailto:info@gigrupee.com" className="contact-info-block">

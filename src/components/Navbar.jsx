@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Logo from './Logo';
-import { Phone, ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar({ onOpenContact }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-
-  const toggleDropdown = (name) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
 
   return (
     <header className="navbar-wrapper">
@@ -75,12 +71,8 @@ export default function Navbar({ onOpenContact }) {
           <a href="#contact" className="nav-link">Contact Us</a>
         </nav>
 
-        {/* Right Action: Phone & Get in Touch CTA */}
+        {/* Right Action: Get in Touch CTA */}
         <div className="navbar-actions">
-          <a href="tel:+919876543210" className="nav-phone">
-            <Phone size={16} className="phone-icon" />
-            <span>+91 98765 43210</span>
-          </a>
           <button 
             type="button" 
             className="btn-primary-nav"
@@ -112,10 +104,6 @@ export default function Navbar({ onOpenContact }) {
           <a href="#careers" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Careers</a>
           <a href="#contact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
           <div className="mobile-drawer-bottom">
-            <a href="tel:+919876543210" className="mobile-phone">
-              <Phone size={16} />
-              <span>+91 98765 43210</span>
-            </a>
             <button 
               type="button" 
               className="btn-primary-nav w-full"

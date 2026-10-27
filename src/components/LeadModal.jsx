@@ -298,7 +298,7 @@ export default function LeadModal({ isOpen, onClose, initialType = 'general' }) 
                         <input 
                           type="tel" 
                           name="Phone Number"
-                          placeholder="+91 98765 43210" 
+                          placeholder="Enter 10-digit mobile number" 
                           required 
                           value={bpoForm.phoneNumber}
                           onChange={(e) => setBpoForm({ ...bpoForm, phoneNumber: e.target.value })}
@@ -503,7 +503,7 @@ export default function LeadModal({ isOpen, onClose, initialType = 'general' }) 
                         <input 
                           type="tel" 
                           name="Mobile Number"
-                          placeholder="+91 98765 43210" 
+                          placeholder="Enter 10-digit mobile number" 
                           required 
                           value={loanForm.phone}
                           onChange={(e) => setLoanForm({ ...loanForm, phone: e.target.value })}
@@ -888,7 +888,7 @@ export default function LeadModal({ isOpen, onClose, initialType = 'general' }) 
                         <input 
                           type="tel" 
                           name="Mobile Number"
-                          placeholder="+91 98765 43210" 
+                          placeholder="Enter 10-digit mobile number" 
                           required 
                           value={generalForm.phone}
                           onChange={(e) => setGeneralForm({ ...generalForm, phone: e.target.value })}

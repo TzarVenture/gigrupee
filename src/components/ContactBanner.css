@@ -8,7 +8,7 @@
   border-radius: 16px;
   padding: 22px 28px;
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1.1fr 1.1fr;
+  grid-template-columns: 1.8fr 1.1fr 1.1fr;
   gap: 20px;
   align-items: center;
   box-shadow: 0 12px 30px rgba(10, 47, 110, 0.25);
